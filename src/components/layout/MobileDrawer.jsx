@@ -9,6 +9,7 @@ import {
   Glasses,
   Gamepad2,
   Brain,
+  Code2,
   Layers, 
   Server, 
   Sparkles, 
@@ -91,6 +92,14 @@ export default function MobileDrawer({
       badge: '🧠 Neo-Trivia',
     },
     {
+      id: 'web-grabber',
+      name: t('navWebGrabber'),
+      desc: 'Ambil & unduh raw HTML website tanpa batasan CORS',
+      icon: <Code2 className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />,
+      color: 'bg-cyan-100 dark:bg-cyan-950/60 text-cyan-800 dark:text-cyan-300',
+      badge: '🌐 HTML Grab',
+    },
+    {
       id: 'author',
       name: t('navAuthor'),
       desc: 'Profil resmi kreator & portofolio',
@@ -106,7 +115,7 @@ export default function MobileDrawer({
   };
 
   return (
-    <div className="fixed inset-0 z-50 xl:hidden flex">
+    <div className="fixed inset-0 z-50 lg:hidden flex">
       {/* Backdrop */}
       <div 
         onClick={onClose}

@@ -1,10 +1,59 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+function webGrabberDevPlugin() {
+  return {
+    name: 'web-grabber-dev-middleware',
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        const path = req.url ? req.url.split('?')[0] : '';
+        if (path === '/api/web-grabber' || path === '/api/tools/web-grabber') {
+          try {
+            const handlerModule = await import('./api/web-grabber.js');
+            const handler = handlerModule.default;
+
+            let rawBody = '';
+            req.on('data', chunk => {
+              rawBody += chunk;
+            });
+            req.on('end', async () => {
+              try {
+                req.body = rawBody ? JSON.parse(rawBody) : {};
+              } catch {
+                req.body = rawBody;
+              }
+
+              res.status = function(code) {
+                res.statusCode = code;
+                return res;
+              };
+              res.json = function(data) {
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify(data));
+                return res;
+              };
+
+              await handler(req, res);
+            });
+            return;
+          } catch (err) {
+            console.error('[WebGrabber Dev Error]', err);
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ success: false, error: err.message }));
+            return;
+          }
+        }
+        next();
+      });
+    }
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
-    plugins: [react()],
+    plugins: [react(), webGrabberDevPlugin()],
     server: {
       port: 3000,
       open: false,

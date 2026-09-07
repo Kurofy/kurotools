@@ -96,6 +96,14 @@ export default function Footer({ setActiveTab }) {
                 </li>
                 <li>
                   <button 
+                    onClick={() => setActiveTab('web-grabber')} 
+                    className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                  >
+                    Web Grabber (HTML Fetcher)
+                  </button>
+                </li>
+                <li>
+                  <button 
                     onClick={() => setActiveTab('author')} 
                     className="hover:text-clayBlue-dark dark:hover:text-sky-300 transition-colors"
                   >

@@ -12,6 +12,7 @@ import AuthorLinkTree from './components/modules/AuthorLinkTree.jsx';
 import MetaGlassesConverter from './components/modules/MetaGlassesConverter.jsx';
 import SecretDexxPortal from './components/modules/SecretDexxPortal.jsx';
 import KuroviaPortal from './components/modules/KuroviaPortal.jsx';
+import WebGrabber from './components/modules/WebGrabber.jsx';
 import Toast from './components/common/Toast.jsx';
 import ScrollProgressBar from './components/common/ScrollProgressBar.jsx';
 import ScrollToTop from './components/common/ScrollToTop.jsx';
@@ -138,6 +139,14 @@ function AppContent() {
         {activeTab === 'kurovia' && (
           <ScrollReveal animation="fade-up" duration={500}>
             <KuroviaPortal 
+              showToast={showToast} 
+            />
+          </ScrollReveal>
+        )}
+
+        {activeTab === 'web-grabber' && (
+          <ScrollReveal animation="fade-up" duration={500}>
+            <WebGrabber 
               showToast={showToast} 
             />
           </ScrollReveal>

@@ -11,6 +11,8 @@ const translations = {
     navBarcode: 'Barcode & QR',
     navMetaGlasses: 'Meta Glasses',
     navSecretDexx: 'SecretDexx',
+    navKurovia: 'Kurovia',
+    navWebGrabber: 'Web Grabber',
     navAuthor: 'Author',
     navMore: 'Lainnya',
     navCatalogBtn: 'Tools Catalogue',
@@ -113,6 +115,15 @@ const translations = {
     kvCategoriesDesc: 'Pilihan kategori pengetahuan lengkap yang tersedia di aplikasi Kurovia.',
     kvPlayCatBtn: 'Mainkan',
 
+    // Web Grabber
+    wgBadge: 'Native Fetch Engine • Tanpa API Pihak Ketiga',
+    wgTitle: 'Web Grabber & Source Fetcher',
+    wgSubtitle: 'Ekstrak, telusuri, dan unduh source code HTML mentah dari halaman web manapun secara instan.',
+    wgDesc: 'Ambil seluruh source code HTML mentah dari website target tanpa batasan CORS dan proteksi bot menggunakan browser-mimicking headers.',
+    wgFetchBtn: 'Grab Source / Fetch HTML',
+    wgCopyBtn: 'Salin Kode',
+    wgDownloadBtn: 'Unduh .html',
+
     // Footer
     footerDesc: 'Platform all-in-one web utility modern berkinerja tinggi dengan pengalaman visual interaktif yang lembut, estetis, dan responsif.',
     footerFree: '100% Gratis',
@@ -131,6 +142,7 @@ const translations = {
     navMetaGlasses: 'Meta Glasses',
     navSecretDexx: 'SecretDexx',
     navKurovia: 'Kurovia',
+    navWebGrabber: 'Web Grabber',
     navAuthor: 'Author',
     navMore: 'More',
     navCatalogBtn: 'Tools Catalogue',
@@ -232,6 +244,15 @@ const translations = {
     kvCategoriesTitle: 'Explore Kurovia Trivia Categories',
     kvCategoriesDesc: 'Comprehensive knowledge categories available in Kurovia trivia app.',
     kvPlayCatBtn: 'Play',
+
+    // Web Grabber
+    wgBadge: 'Native Fetch Engine • Zero External API',
+    wgTitle: 'Web Grabber & Source Fetcher',
+    wgSubtitle: 'Extract, inspect, and download raw HTML source code from any webpage instantly.',
+    wgDesc: 'Grab complete raw HTML source code from any target website without CORS restrictions and bot-blocks using browser-mimicking headers.',
+    wgFetchBtn: 'Grab Source / Fetch HTML',
+    wgCopyBtn: 'Copy Code',
+    wgDownloadBtn: 'Download .html',
 
     // Footer
     footerDesc: 'Modern high-performance all-in-one web utility platform with a smooth, aesthetic, and responsive interactive experience.',

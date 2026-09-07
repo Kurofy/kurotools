@@ -205,6 +205,33 @@ export default function DesktopMoreDrawer({
                 </span>
               </div>
 
+              {/* Web Grabber */}
+              <div 
+                onClick={() => handleNavigate('web-grabber')}
+                className={`p-3.5 rounded-2xl cursor-pointer transition-all border flex items-center justify-between group ${
+                  activeTab === 'web-grabber'
+                    ? 'bg-cyan-100/50 dark:bg-cyan-950/50 border-cyan-400 shadow-sm'
+                    : 'bg-claySlate-50/80 dark:bg-[#0F1626] border-claySlate-200 dark:border-white/5 hover:border-cyan-400/40'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-cyan-100 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-black flex-shrink-0">
+                    <Code2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-black text-claySlate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                      Web Grabber (HTML Fetcher)
+                    </h4>
+                    <p className="text-[10px] text-claySlate-500 dark:text-slate-400">
+                      Ambil raw HTML source website tanpa CORS & API luar
+                    </p>
+                  </div>
+                </div>
+                <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-cyan-100 dark:bg-cyan-900/60 text-cyan-800 dark:text-cyan-300">
+                  🌐 HTML Grab
+                </span>
+              </div>
+
               {/* Author LinkTree */}
               <div 
                 onClick={() => handleNavigate('author')}

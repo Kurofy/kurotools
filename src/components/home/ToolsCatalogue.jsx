@@ -10,6 +10,7 @@ import {
   Glasses,
   Gamepad2,
   Brain,
+  Code2,
   Search,
   X,
   ChevronDown,
@@ -30,7 +31,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'Media Downloader',
       category: 'Video & Audio Extractor',
       accent: 'purple',
-      colorBadge: 'bg-clayPurple-light text-clayPurple-dark',
+      colorBadge: 'bg-purple-100 text-purple-900 dark:bg-purple-950/80 dark:text-purple-200 dark:border-purple-800/40',
       btnClass: 'clay-button-purple',
       shadowClass: 'hover:shadow-clay-purple',
       borderAccent: 'border-clayPurple/30',
@@ -48,7 +49,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'Link Shortener',
       category: 'URL Utility & Tracking',
       accent: 'green',
-      colorBadge: 'bg-clayGreen-light text-emerald-900',
+      colorBadge: 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-200 dark:border-emerald-800/40',
       btnClass: 'clay-button-green',
       shadowClass: 'hover:shadow-clay-green',
       borderAccent: 'border-clayGreen/30',
@@ -66,7 +67,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'Barcode & QR Generator',
       category: 'Code Generator 1D & 2D',
       accent: 'orange',
-      colorBadge: 'bg-clayOrange-light text-orange-900',
+      colorBadge: 'bg-orange-100 text-orange-900 dark:bg-orange-950/80 dark:text-orange-200 dark:border-orange-800/40',
       btnClass: 'clay-button-orange',
       shadowClass: 'hover:shadow-clay-orange',
       borderAccent: 'border-clayOrange/30',
@@ -84,7 +85,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'Author LinkTree',
       category: 'Creator & Portfolio Profile',
       accent: 'blue',
-      colorBadge: 'bg-clayBlue-light text-sky-900',
+      colorBadge: 'bg-sky-100 text-sky-900 dark:bg-sky-950/80 dark:text-sky-200 dark:border-sky-800/40',
       btnClass: 'clay-button-blue',
       shadowClass: 'hover:shadow-clay-blue',
       borderAccent: 'border-clayBlue/30',
@@ -102,7 +103,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'Meta Glasses EIF',
       category: 'Instagram 3D Story Motion',
       accent: 'cyan',
-      colorBadge: 'bg-cyan-100 text-cyan-900',
+      colorBadge: 'bg-cyan-100 text-cyan-900 dark:bg-cyan-950/80 dark:text-cyan-200 dark:border-cyan-800/40',
       btnClass: 'clay-button-purple',
       shadowClass: 'hover:shadow-clay-purple',
       borderAccent: 'border-cyan-400/40',
@@ -120,7 +121,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'SecretDexx Hub',
       category: 'Roblox Game Script Directory',
       accent: 'emerald',
-      colorBadge: 'bg-emerald-100 text-emerald-900',
+      colorBadge: 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-200 dark:border-emerald-800/40',
       btnClass: 'clay-button-green',
       shadowClass: 'hover:shadow-clay-green',
       borderAccent: 'border-emerald-400/40',
@@ -138,7 +139,7 @@ export default function ToolsCatalogue({ setActiveTab }) {
       title: 'Kurovia Trivia Hub',
       category: 'Neo-Brutalist Trivia Game',
       accent: 'amber',
-      colorBadge: 'bg-amber-100 text-amber-900',
+      colorBadge: 'bg-amber-100 text-amber-900 dark:bg-amber-950/80 dark:text-amber-200 dark:border-amber-800/40',
       btnClass: 'clay-button-yellow bg-gradient-to-r from-amber-400 to-yellow-400 text-black border border-black/20 shadow-clay-card hover:brightness-105',
       shadowClass: 'hover:shadow-amber-500/20',
       borderAccent: 'border-amber-400/40',
@@ -150,6 +151,24 @@ export default function ToolsCatalogue({ setActiveTab }) {
         'Tautan resmi & showcase langsung ke kurovia.vercel.app'
       ],
       tag: '🧠 Neo-Trivia'
+    },
+    {
+      id: 'web-grabber',
+      title: 'Web Grabber & HTML Fetcher',
+      category: 'Source Code Extractor',
+      accent: 'cyan',
+      colorBadge: 'bg-cyan-100 text-cyan-900 dark:bg-cyan-950/80 dark:text-cyan-200 dark:border-cyan-800/40',
+      btnClass: 'clay-button-cyan bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-clay-card hover:brightness-105',
+      shadowClass: 'hover:shadow-cyan-500/20',
+      borderAccent: 'border-cyan-400/40',
+      icon: <Code2 className="w-8 h-8 text-cyan-600" />,
+      desc: 'Ekstrak, telusuri, dan unduh source code HTML mentah dari website target tanpa batasan CORS dan proteksi bot User-Agent.',
+      features: [
+        '100% Native Fetch Serverless relay tanpa API pihak ketiga',
+        'Auto-inject header browser Chrome untuk bypass bot checks',
+        'Fitur pencarian di dalam kode, Copy 1-klik, dan Unduh .html'
+      ],
+      tag: '🌐 HTML Grab'
     }
   ];
 
@@ -265,10 +284,10 @@ export default function ToolsCatalogue({ setActiveTab }) {
                       {tool.icon}
                     </div>
                     <div className="flex flex-col items-end gap-1.5">
-                      <span className="clay-badge text-[10px] font-black bg-white dark:bg-[#0B1120] text-claySlate-700 dark:text-slate-300 shadow-sm border border-claySlate-100 dark:border-white/5">
+                      <span className="clay-badge text-[10px] font-black bg-white dark:bg-slate-800 text-claySlate-800 dark:text-slate-100 shadow-sm border border-claySlate-200/90 dark:border-slate-700">
                         {tool.tag}
                       </span>
-                      <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-full ${tool.colorBadge} dark:bg-opacity-20 dark:border dark:border-white/10`}>
+                      <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-transparent shadow-sm ${tool.colorBadge}`}>
                         {tool.category}
                       </span>
                     </div>

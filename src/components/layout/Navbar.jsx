@@ -40,6 +40,7 @@ export default function Navbar({
     'meta-glasses': t('navMetaGlasses'),
     'secretdexx': t('navSecretDexx'),
     'kurovia': t('navKurovia'),
+    'web-grabber': t('navWebGrabber'),
     'author': t('navAuthor'),
   };
 
@@ -142,53 +143,52 @@ export default function Navbar({
           </nav>
 
           {/* 3. Right Section: Switch Lang, Night Mode Switch & API Status */}
-          <div className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0">
             
             {/* Language Switcher Pill (ID | EN) */}
             <button
               onClick={toggleLang}
-              className="clay-badge bg-white/95 dark:bg-[#161F30] border border-claySlate-200 dark:border-slate-700/80 text-claySlate-700 dark:text-slate-200 text-xs font-black py-1.5 px-3 hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 shadow-sm flex-shrink-0"
+              className="clay-badge bg-white/95 dark:bg-[#161F30] border border-claySlate-200 dark:border-slate-700/80 text-claySlate-700 dark:text-slate-200 text-xs font-black py-1.5 px-2.5 sm:px-3 hover:scale-105 active:scale-95 transition-all flex items-center gap-1 sm:gap-1.5 shadow-sm flex-shrink-0"
               title={t('langToggle')}
               aria-label={t('langToggle')}
             >
-              <Globe className="w-3.5 h-3.5 text-clayPurple" />
+              <Globe className="w-3.5 h-3.5 text-clayPurple flex-shrink-0" />
               <span>{lang === 'id' ? 'ID' : 'EN'}</span>
             </button>
 
-            {/* Night Mode Toggle Switch (Directly beside API Online) */}
+            {/* Night Mode Toggle Switch */}
             <button 
               type="button"
               onClick={toggleTheme}
-              className="relative w-[52px] h-[28px] flex-shrink-0 bg-claySlate-200 dark:bg-[#131A29] rounded-full p-[3px] cursor-pointer select-none transition-colors border border-claySlate-300/80 dark:border-slate-700/80 shadow-inner flex items-center justify-between"
+              className="relative w-[48px] sm:w-[52px] h-[26px] sm:h-[28px] flex-shrink-0 bg-claySlate-200 dark:bg-[#131A29] rounded-full p-[3px] cursor-pointer select-none transition-colors border border-claySlate-300/80 dark:border-slate-700/80 shadow-inner flex items-center justify-between"
               title={isDark ? t('themeLight') : t('themeDark')}
               role="switch"
               aria-checked={isDark}
             >
               {/* Background track icons for reference */}
-              <Sun className="w-3 h-3 text-amber-500 ml-1 opacity-70 flex-shrink-0" />
-              <Moon className="w-3 h-3 text-purple-400 mr-1 opacity-70 flex-shrink-0" />
+              <Sun className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-500 ml-1 opacity-70 flex-shrink-0" />
+              <Moon className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-purple-400 mr-1 opacity-70 flex-shrink-0" />
 
               {/* Sliding thumb */}
               <span
-                className={`absolute top-[3px] left-[3px] w-[22px] h-[22px] rounded-full flex items-center justify-center transition-transform duration-250 ease-out shadow-sm ${
+                className={`absolute top-[2.5px] left-[3px] w-[20px] sm:w-[22px] h-[20px] sm:h-[22px] rounded-full flex items-center justify-center transition-transform duration-250 ease-out shadow-sm ${
                   isDark
-                    ? 'translate-x-[24px] bg-gradient-to-tr from-purple-600 to-indigo-500 text-white shadow-purple-500/40'
+                    ? 'translate-x-[22px] sm:translate-x-[24px] bg-gradient-to-tr from-purple-600 to-indigo-500 text-white shadow-purple-500/40'
                     : 'translate-x-0 bg-white text-amber-500 shadow-sm'
                 }`}
               >
                 {isDark ? (
-                  <Moon className="w-3 h-3" />
+                  <Moon className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                 ) : (
-                  <Sun className="w-3 h-3" />
+                  <Sun className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                 )}
               </span>
             </button>
 
-            {/* API Status Live Indicator */}
-            {/* API Status Live Indicator */}
+            {/* API Status Live Indicator (Hidden on mobile < 640px to prevent overflow; visible on sm+ and inside mobile drawer) */}
             <div 
               title={t('navApiConnected')}
-              className="clay-badge bg-white/95 dark:bg-[#131F2A] border border-emerald-200/80 dark:border-emerald-700/50 select-none text-emerald-700 dark:text-emerald-300 py-1.5 px-3 shadow-sm inline-flex items-center gap-1.5 flex-shrink-0"
+              className="clay-badge bg-white/95 dark:bg-[#131F2A] border border-emerald-200/80 dark:border-emerald-700/50 select-none text-emerald-700 dark:text-emerald-300 py-1.5 px-3 shadow-sm hidden sm:inline-flex items-center gap-1.5 flex-shrink-0"
             >
               <span className="relative flex h-2 w-2 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -197,13 +197,14 @@ export default function Navbar({
               <span className="text-[11px] font-extrabold whitespace-nowrap">{t('navApiOnline')}</span>
             </div>
 
-            {/* Mobile / Tablet Drawer Toggle */}
+            {/* Mobile / Tablet Drawer Toggle (Nav Side Button) */}
             <button
               onClick={onOpenMobileDrawer}
-              className="lg:hidden clay-button clay-button-white dark:bg-[#131B2E] dark:text-white dark:border-white/10 w-9 h-9 p-0 text-claySlate-700 flex-shrink-0"
+              className="lg:hidden clay-button clay-button-white dark:bg-[#131B2E] dark:text-white dark:border-white/10 w-8 h-8 sm:w-9 sm:h-9 p-0 text-claySlate-700 flex items-center justify-center flex-shrink-0"
               aria-label="Buka menu navigasi"
+              title="Menu"
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
           </div>
