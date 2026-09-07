@@ -68,15 +68,15 @@ const translations = {
     catShowAll: 'Tampilkan Semua Alat',
     catViewMore: 'Lihat Selengkapnya',
     catViewLess: 'Tampilkan Lebih Sedikit',
-    catExtraTools: 'Alat Lainnya',
     catOpenModule: 'Buka Modul',
 
     // Meta Glasses EIF
-    mgBadge: 'Instagram Story 3D Motion EIF',
-    mgTitle: 'Image to Meta Glasses EIF',
-    mgSubtitle: 'Suntikkan metadata EXIF otentik Ray-Ban Meta Smart Glasses ke dalam foto apapun. Saat diunggah ke Instagram Story, Instagram akan mengenali metadata kamera kacamata pintar ini dan mengaktifkan fitur Glasses Tools interaktif dengan efek gerak 3D!',
-    mgStep1: '1. Unggah Foto Target',
-    mgStep2: '2. Konfigurasi Metadata Ray-Ban Meta',
+    mgBadge: 'Simulator & Generator EXIF Ray-Ban Meta',
+    mgTitle: 'Meta Glasses EIF Injector',
+    mgSubtitle: 'Bikin foto biasa dari HP apa saja terlihat diambil langsung dari Kacamata Pintar Ray-Ban Meta di Instagram Story dengan efek 3D interaktif!',
+    mgUploadTitle: 'Unggah Foto Anda',
+    mgUploadDesc: 'Seret & lepas foto Anda di sini, atau klik untuk memilih file dari perangkat Anda (JPG/JPEG disarankan).',
+    mgChooseFile: 'Pilih Foto dari Galeri',
     mgSimTitle: 'Simulasi Gerak 3D Instagram Story',
     mgSimHint: 'Gerakkan kursor atau miringkan smartphone Anda',
     mgOverlayBadge: 'Badge Overlay IG',
@@ -102,6 +102,17 @@ const translations = {
     sdCopiedBtn: 'Tersalin!',
     sdOpenWebBtn: 'Buka di SecretDexx',
 
+    // Kurovia Trivia Hub
+    kvBadge: 'Modul Transfer Ekosistem KuroDev',
+    kvTitle: 'Kurovia Trivia Hub',
+    kvSubtitle: 'Asah Otakmu dengan Game Trivia Interaktif Berbahasa Inggris Terlengkap.',
+    kvDesc: 'Platform kuis trivia berkecepatan tinggi bergaya Neo-Brutalism dengan ribuan bank soal Open Trivia DB global, Session Token anti-duplikasi, mode timer 15 detik, multiplier combo streak, dan Cloud Leaderboard Supabase.',
+    kvVisitBtn: 'Mainkan di Kurovia (Live App)',
+    kvCopyUrlBtn: 'Salin URL Kurovia',
+    kvCategoriesTitle: 'Eksplorasi Kategori Trivia Kurovia',
+    kvCategoriesDesc: 'Pilihan kategori pengetahuan lengkap yang tersedia di aplikasi Kurovia.',
+    kvPlayCatBtn: 'Mainkan',
+
     // Footer
     footerDesc: 'Platform all-in-one web utility modern berkinerja tinggi dengan pengalaman visual interaktif yang lembut, estetis, dan responsif.',
     footerFree: '100% Gratis',
@@ -119,6 +130,7 @@ const translations = {
     navBarcode: 'Barcode & QR',
     navMetaGlasses: 'Meta Glasses',
     navSecretDexx: 'SecretDexx',
+    navKurovia: 'Kurovia',
     navAuthor: 'Author',
     navMore: 'More',
     navCatalogBtn: 'Tools Catalogue',
@@ -209,6 +221,17 @@ const translations = {
     sdCopyBtn: 'Copy',
     sdCopiedBtn: 'Copied!',
     sdOpenWebBtn: 'Open on SecretDexx',
+
+    // Kurovia Trivia Hub
+    kvBadge: 'KuroDev Ecosystem Transfer Module',
+    kvTitle: 'Kurovia Trivia Hub',
+    kvSubtitle: 'Sharpen Your Mind with the Ultimate English Trivia Game Experience.',
+    kvDesc: 'High-speed Neo-Brutalist trivia web app powered by Open Trivia DB, duplicate-free Session Tokens, 15s timer mode, combo streak multipliers, and Supabase Cloud Leaderboards.',
+    kvVisitBtn: 'Play on Kurovia (Live App)',
+    kvCopyUrlBtn: 'Copy Kurovia URL',
+    kvCategoriesTitle: 'Explore Kurovia Trivia Categories',
+    kvCategoriesDesc: 'Comprehensive knowledge categories available in Kurovia trivia app.',
+    kvPlayCatBtn: 'Play',
 
     // Footer
     footerDesc: 'Modern high-performance all-in-one web utility platform with a smooth, aesthetic, and responsive interactive experience.',

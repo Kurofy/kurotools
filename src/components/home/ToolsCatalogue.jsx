@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Glasses,
   Gamepad2,
+  Brain,
   Search,
   X,
   ChevronDown,
@@ -131,6 +132,24 @@ export default function ToolsCatalogue({ setActiveTab }) {
         'Tautan resmi & showcase langsung ke secretdexx.netlify.app'
       ],
       tag: '🎮 Roblox Hub'
+    },
+    {
+      id: 'kurovia',
+      title: 'Kurovia Trivia Hub',
+      category: 'Neo-Brutalist Trivia Game',
+      accent: 'amber',
+      colorBadge: 'bg-amber-100 text-amber-900',
+      btnClass: 'clay-button-yellow bg-gradient-to-r from-amber-400 to-yellow-400 text-black border border-black/20 shadow-clay-card hover:brightness-105',
+      shadowClass: 'hover:shadow-amber-500/20',
+      borderAccent: 'border-amber-400/40',
+      icon: <Brain className="w-8 h-8 text-amber-600" />,
+      desc: 'Asah otakmu dengan ribuan soal trivia berbahasa Inggris Open Trivia DB, mode timer 15 detik, skoring combo streak, dan Cloud Leaderboard Supabase.',
+      features: [
+        '24+ Kategori pengetahuan sains, pop culture, game & anime',
+        'Session Token anti-duplikat & lifelines (50:50 & Skip)',
+        'Tautan resmi & showcase langsung ke kurovia.vercel.app'
+      ],
+      tag: '🧠 Neo-Trivia'
     }
   ];
 
@@ -260,6 +279,9 @@ export default function ToolsCatalogue({ setActiveTab }) {
                     <span>{tool.title}</span>
                     {tool.id === 'secretdexx' && (
                       <ExternalLink className="w-4 h-4 text-emerald-600 opacity-60 group-hover:opacity-100 transition-opacity" />
+                    )}
+                    {tool.id === 'kurovia' && (
+                      <ExternalLink className="w-4 h-4 text-amber-600 opacity-60 group-hover:opacity-100 transition-opacity" />
                     )}
                   </h3>
                   <p className="text-xs sm:text-sm text-claySlate-600 dark:text-slate-300 font-medium leading-relaxed mb-6">

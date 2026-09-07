@@ -88,6 +88,14 @@ export default function Footer({ setActiveTab }) {
                 </li>
                 <li>
                   <button 
+                    onClick={() => setActiveTab('kurovia')} 
+                    className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                  >
+                    Kurovia Trivia Hub (OpenTDB)
+                  </button>
+                </li>
+                <li>
+                  <button 
                     onClick={() => setActiveTab('author')} 
                     className="hover:text-clayBlue-dark dark:hover:text-sky-300 transition-colors"
                   >

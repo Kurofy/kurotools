@@ -8,6 +8,7 @@ import {
   User, 
   Glasses,
   Gamepad2,
+  Brain,
   Layers, 
   Server, 
   Sparkles, 
@@ -80,6 +81,14 @@ export default function MobileDrawer({
       icon: <Gamepad2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
       color: 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300',
       badge: '🎮 Roblox Hub',
+    },
+    {
+      id: 'kurovia',
+      name: t('navKurovia'),
+      desc: 'Game trivia bahasa Inggris interaktif & leaderboard',
+      icon: <Brain className="w-5 h-5 text-amber-600 dark:text-amber-400" />,
+      color: 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300',
+      badge: '🧠 Neo-Trivia',
     },
     {
       id: 'author',

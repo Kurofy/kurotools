@@ -11,6 +11,7 @@ import BarcodeGenerator from './components/modules/BarcodeGenerator.jsx';
 import AuthorLinkTree from './components/modules/AuthorLinkTree.jsx';
 import MetaGlassesConverter from './components/modules/MetaGlassesConverter.jsx';
 import SecretDexxPortal from './components/modules/SecretDexxPortal.jsx';
+import KuroviaPortal from './components/modules/KuroviaPortal.jsx';
 import Toast from './components/common/Toast.jsx';
 import ScrollProgressBar from './components/common/ScrollProgressBar.jsx';
 import ScrollToTop from './components/common/ScrollToTop.jsx';
@@ -129,6 +130,14 @@ function AppContent() {
         {activeTab === 'secretdexx' && (
           <ScrollReveal animation="fade-up" duration={500}>
             <SecretDexxPortal 
+              showToast={showToast} 
+            />
+          </ScrollReveal>
+        )}
+
+        {activeTab === 'kurovia' && (
+          <ScrollReveal animation="fade-up" duration={500}>
+            <KuroviaPortal 
               showToast={showToast} 
             />
           </ScrollReveal>
