@@ -152,7 +152,7 @@ export default function Footer({ setActiveTab }) {
                 onClick={() => setActiveTab('author')}
                 className="clay-badge bg-white dark:bg-[#161F30] text-clayPurple-dark dark:text-purple-300 font-extrabold text-[11px] hover:scale-105"
               >
-                @Kuro
+                @Kurofy
               </button>
             </div>
           </div>

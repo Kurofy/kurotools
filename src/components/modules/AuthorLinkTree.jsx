@@ -25,11 +25,11 @@ export default function AuthorLinkTree({ showToast }) {
   const [qrDataUrl, setQrDataUrl] = useState('');
 
   const authorData = {
-    name: 'Kuro',
+    name: 'Kurofy',
     handle: '@kurodev',
     role: 'Full-Stack Developer & UI/UX Craftsman',
     bio: 'Pengembang perangkat lunak web modern yang cepat, estetis, tanpa iklan, dan mudah diakses oleh siapa saja.',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80',
+    avatarUrl: '/author-profile.jpg',
     location: 'Indonesia',
     status: 'Tersedia untuk Kolaborasi & Proyek Baru',
     links: [
@@ -137,7 +137,7 @@ export default function AuthorLinkTree({ showToast }) {
   // Share Profile
   const handleShare = async () => {
     const shareData = {
-      title: 'Kuro - Creator of KuroTools',
+      title: 'Kurofy - Creator of KuroTools',
       text: 'Kunjungi profil interaktif author KuroTools!',
       url: window.location.href,
     };
@@ -307,7 +307,7 @@ export default function AuthorLinkTree({ showToast }) {
             </div>
 
             <h3 className="text-lg font-black text-claySlate-900 mb-1">Kode QR Profil</h3>
-            <p className="text-xs text-claySlate-500 font-medium mb-4">Pindai untuk membuka profil kreator Kuro</p>
+            <p className="text-xs text-claySlate-500 font-medium mb-4">Pindai untuk membuka profil kreator Kurofy</p>
 
             <div className="p-4 bg-clayBlue-bg rounded-2xl border border-clayBlue-light inline-block shadow-inner mb-5">
               <img src={qrDataUrl} alt="Author QR Code" className="w-48 h-48 mx-auto rounded-xl" />
@@ -317,7 +317,7 @@ export default function AuthorLinkTree({ showToast }) {
               onClick={() => {
                 const a = document.createElement('a');
                 a.href = qrDataUrl;
-                a.download = 'kuro_author_qr.png';
+                a.download = 'kurofy_author_qr.png';
                 a.click();
               }}
               className="w-full clay-button clay-button-blue py-3 text-xs font-black text-sky-950"
